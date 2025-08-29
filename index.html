@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outer Space Real Estate</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Outer Space Real Estate</h1>
+        <p>Find your dream home in the cosmos</p>
+    </header>
+
+    <div class="filters">
+        <div class="filter-group">
+            <label for="planet-select">Planet:</label>
+            <select id="planet-select">
+                <option value="">All Planets</option>
+                <option value="LEO">LEO</option>
+                <option value="Moon">Moon</option>
+                <option value="Mars">Mars</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="price-min">Min Price:</label>
+            <input type="number" id="price-min" placeholder="0">
+        </div>
+
+        <div class="filter-group">
+            <label for="price-max">Max Price:</label>
+            <input type="number" id="price-max" placeholder="10000000">
+        </div>
+
+        <div class="filter-group">
+            <label>Features:</label>
+            <div class="features-checkboxes">
+                <label><input type="checkbox" value="Zero Gravity"> Zero Gravity</label>
+                <label><input type="checkbox" value="Earth View"> Earth View</label>
+                <label><input type="checkbox" value="Solar Panels"> Solar Panels</label>
+                <label><input type="checkbox" value="Dome Structure"> Dome Structure</label>
+                <label><input type="checkbox" value="Regolith Insulation"> Regolith Insulation</label>
+                <label><input type="checkbox" value="Water Recycling"> Water Recycling</label>
+                <label><input type="checkbox" value="Dust Resistant"> Dust Resistant</label>
+                <label><input type="checkbox" value="Greenhouse"> Greenhouse</label>
+                <label><input type="checkbox" value="Radiation Shielding"> Radiation Shielding</label>
+                <label><input type="checkbox" value="Artificial Gravity"> Artificial Gravity</label>
+                <label><input type="checkbox" value="Gym"> Gym</label>
+                <label><input type="checkbox" value="Observation Deck"> Observation Deck</label>
+                <label><input type="checkbox" value="Natural Cave"> Natural Cave</label>
+                <label><input type="checkbox" value="Mining Rights"> Mining Rights</label>
+                <label><input type="checkbox" value="Helium-3 Access"> Helium-3 Access</label>
+                <label><input type="checkbox" value="Modular Design"> Modular Design</label>
+                <label><input type="checkbox" value="Solar Power"> Solar Power</label>
+                <label><input type="checkbox" value="3D Printer"> 3D Printer</label>
+                <label><input type="checkbox" value="Compact Living"> Compact Living</label>
+                <label><input type="checkbox" value="Satellite Internet"> Satellite Internet</label>
+                <label><input type="checkbox" value="Microgravity Garden"> Microgravity Garden</label>
+                <label><input type="checkbox" value="Lab Equipment"> Lab Equipment</label>
+                <label><input type="checkbox" value="Telescope"> Telescope</label>
+                <label><input type="checkbox" value="Isolated Location"> Isolated Location</label>
+                <label><input type="checkbox" value="Mountain View"> Mountain View</label>
+                <label><input type="checkbox" value="Volcanic Energy"> Volcanic Energy</label>
+                <label><input type="checkbox" value="Private Landing Pad"> Private Landing Pad</label>
+            </div>
+        </div>
+
+        <button id="apply-filters">Apply Filters</button>
+    </div>
+
+    <div class="listings" id="listings-container">
+        <!-- Listings will be populated here -->
+    </div>
+
+    <!-- Listing detail modal -->
+    <div id="listing-modal" class="modal" aria-hidden="true">
+        <div class="modal-backdrop" id="modal-backdrop"></div>
+        <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" id="modal-close" aria-label="Close">×</button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modal-image" src="" alt="listing image">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-title">Title</h2>
+                    <div class="modal-price" id="modal-price"></div>
+                    <div class="modal-features" id="modal-features"></div>
+                    <p id="modal-description"></p>
+                    <div class="modal-actions">
+                        <button id="inquire-btn" class="btn-primary">Inquire</button>
+                        <button id="close-btn" class="btn-secondary">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
